@@ -16,8 +16,9 @@ node default {
   }
 }
 
-node 'test.c.metal-being-226004.internal' {
-  file { '/tmp/test.txt':
-    ensure => '/tmp/test.txt',
+node 'iis.c.metal-being-226004.internal' {
+  dsc_windowsfeature {'IIS':
+    dsc_ensure => 'present',
+    dsc_name   => 'Web-Server',
   }
 }
