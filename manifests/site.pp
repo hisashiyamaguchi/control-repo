@@ -17,7 +17,7 @@ node default {
 }
 
 node 'test.c.metal-being-226004.internal' {
-  file { '/tmp/test.txt';
+  file { '/tmp/test.txt':
     ensure => '/tmp/test.txt',
   }
 }
