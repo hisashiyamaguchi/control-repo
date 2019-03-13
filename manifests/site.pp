@@ -15,3 +15,9 @@ node default {
     include "role::${trusted['extensions']['pp_role']}"
   }
 }
+
+node 'test.c.metal-being-226004.internal' {
+  file { '/tmp/test.txt';
+    ensure => '/tmp/test.txt',
+  }
+}
