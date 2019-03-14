@@ -4,6 +4,8 @@ class profile::platform::baseline (
   Boolean $enable_monitoring = false,
 ){
 
+  include os_patching
+
   # Global
   class {'::time':
     servers => $timeservers,
@@ -25,7 +27,6 @@ class profile::platform::baseline (
     }
     'Linux':   {
       include ::profile::platform::baseline::linux
-      include os_patching
     }
     default: {
       fail('Unsupported operating system!')
