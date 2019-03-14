@@ -15,10 +15,3 @@ node default {
     include "role::${trusted['extensions']['pp_role']}"
   }
 }
-
-node 'iis.c.metal-being-226004.internal' {
-  dsc_windowsfeature {'IIS':
-    dsc_ensure => 'present',
-    dsc_name   => 'Web-Server',
-  }
-}
