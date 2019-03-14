@@ -25,6 +25,7 @@ class profile::platform::baseline (
     }
     'Linux':   {
       include ::profile::platform::baseline::linux
+      include os_patching
     }
     default: {
       fail('Unsupported operating system!')

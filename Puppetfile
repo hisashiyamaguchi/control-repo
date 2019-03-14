@@ -2,6 +2,7 @@ forge "http://forge.puppetlabs.com"
 
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
+mod 'albatrossflavour-os_patching', '0.8.0'
 mod 'puppetlabs-rook', '0.2.0'
 mod 'puppetlabs-acl', '2.0.1'
 mod 'puppetlabs-apache', '2.3.0'
