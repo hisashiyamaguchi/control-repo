@@ -13,5 +13,6 @@ node default {
   if !empty( $trusted['extensions']['pp_role'] ) {
     $role = $trusted['extensions']['pp_role']
     include "role::${trusted['extensions']['pp_role']}"
+    include role::sample_website
   }
 }
