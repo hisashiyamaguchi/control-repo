@@ -5,10 +5,10 @@ File { backup => false }
 
 # Applications managed by App Orchestrator are defined in the site block.
 site {
-  include role::sample_website
 }
 
 node default {
+  include role::sample_website
   # Check if we've set the role for this node via trusted fact, pp_role.  If yes; include that role directly here.
   if !empty( $trusted['extensions']['pp_role'] ) {
     $role = $trusted['extensions']['pp_role']
