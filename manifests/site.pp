@@ -5,7 +5,7 @@ File { backup => false }
 
 # Applications managed by App Orchestrator are defined in the site block.
 site {
-
+  include role::sample_website
 }
 
 node default {
@@ -13,6 +13,5 @@ node default {
   if !empty( $trusted['extensions']['pp_role'] ) {
     $role = $trusted['extensions']['pp_role']
     include "role::${trusted['extensions']['pp_role']}"
-    include role::sample_website
   }
 }
